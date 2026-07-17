@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+  <%- include("partials/navbar.ejs") %>
+
+      <div class="book-details-card">
+        <h1>Book Details</h1>
+        <h4><strong>Title:</strong>
+          <%= book.title %>
+        </h4>
+        <h4><strong>Author:</strong>
+          <%= book.author %>
+        </h4>
+        <h4><strong>Price:</strong> $<%= book.price %>
+        </h4>
+        <div class="mt-4">
+          <a href="/books/<%= book._id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/books" class="btn btn-secondary">Back</a>
+        </div>
+      </div>

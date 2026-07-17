@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+  <%- include("partials/navbar.ejs") %>
+
+  <h2>Add Book</h2>
+
+  <form action="/books" method="POST">
+    <div>
+      <label for="">Title</label>
+      <input type="text" name="title" class="form-control">
+    </div>
+     <div>
+      <label for="">Author</label>
+      <input type="text" name="author" class="form-control">
+    </div>
+     <div>
+      <label for="">Price</label>
+      <input type="number" name="price" class="form-control">
+    </div>
+    <button class="btn btn-success">Add Book</button>
+  </form>
+
+  <%- include("partials/footer.ejs") %>

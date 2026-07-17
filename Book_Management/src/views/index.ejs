@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+  <%- include("partials/navbar.ejs") %>
+
+    <h2>Book List</h2>
+    <form method="GET" action="/books" class="row g-2 my-3">
+      <div class="col-md-6">
+        <input type="text" name="search" class="form-control" placeholder="Search Book" value="<%= search %>">
+      </div>
+      <div class="col-md-4">
+        <select name="sort" class="form-select">
+          <option value="title">Name A - Z</option>
+          <option value="-title">Name Z - A</option>
+          <option value="price">Price Low-High</option>
+          <option value="-price">Price High-Low</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100">Search</button>
+      </div>
+    </form>
+
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Price</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% books.forEach(book=> { %>
+          <tr>
+            <td>
+              <%= book.title %>
+            </td>
+            <td>
+              <%= book.author %>
+            </td>
+            <td>
+              <%= book.price %>
+            </td>
+            <td>
+              <a href="/books/<%= book._id %>" class="btn btn-sm btn-info">View</a>
+              <a href="/books/<%= book._id %>/edit" class="btn btn-sm btn-warning">Edit</a>
+              <form action="/books/<%= book._id %>" method="POST" style="display:inline;">
+                <input type="hidden" name="_method" value="DELETE">
+                <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+
+    <%- include("partials/footer.ejs") %>

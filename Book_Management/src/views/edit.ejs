@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+  <%- include("partials/navbar.ejs") %>
+
+  <h2>Edit Book</h2>
+
+  <form action="/books/<%= book._id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <div>
+      <label for="">Title</label>
+      <input type="text" name="title" class="form-control" value="<%= book.title %>">
+    </div>
+     <div>
+      <label for="">Author</label>
+      <input type="text" name="author" class="form-control" value="<%= book.author %>">
+    </div>
+     <div>
+      <label for="">Price</label>
+      <input type="number" name="price" class="form-control" value="<%= book.price %>">
+    </div>
+    <button class="btn btn-success">Edit Book</button>
+  </form>
+
+  <%- include("partials/footer.ejs") %>

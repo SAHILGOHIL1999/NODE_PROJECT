@@ -1,0 +1,153 @@
+/*  Global Resets & Layout  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+nav {
+    background-color: #2b4c7e;
+    padding: 15px 0;
+}
+
+nav>div {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav div div a {
+    margin-left: 20px;
+}
+
+nav div div:first-child a {
+    margin-left: 0;
+    font-size: 20px;
+}
+
+/*  Typography  */
+h1,
+h2 {
+    color: #2b4c7e;
+    margin-bottom: 20px;
+}
+
+/*  Form */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form .form-control,
+form select {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+form .form-control:focus,
+form select:focus {
+    outline: none;
+    border-color: #4a6fa5;
+}
+
+/*  Table  */
+table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f1f3f5;
+    color: #495057;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Keep action links tight in table cells */
+td a,
+td button {
+    margin-right: 5px;
+}
+
+/*  Details Card  */
+.book-details-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.book-details-card h4 {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #dee2e6;
+    font-weight: normal;
+}
+
+/*  Footer */
+footer,
+div[style*="Book CRUD"] {
+    background-color: #e3e8f0;
+    color: #5c6b73;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #dee2e6;
+}
