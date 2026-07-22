@@ -44,7 +44,7 @@ export const getBooks = async (req, res) => {
     let filter = {};
 
     if (search) {
-      filter.title = { // Fixed query property to match schema
+      filter.title = { 
         $regex: search,
         $options: "i",
       };
@@ -53,7 +53,6 @@ export const getBooks = async (req, res) => {
     let query = Books.find(filter);
 
     if (sort) {
-      // Expecting standard mongoose sort formats like 'price' or '-price'
       query = query.sort(sort);
     }
 
